@@ -23,15 +23,15 @@ onHeroRemoved(id){
             <h1>SuperSquad</h1>
             <div className="row">
                 <div className="col-lg-4">
-                    <h3>Characters:</h3>
+                    <h3>Characters</h3>
                     <HeroesList heroesList = {this.props.heroesList}  onSelect = {(id) => {this.onHeroSelect(id)}}/>
                 </div>
                 <div className="col-lg-4">
-                    <h3>Your Squad:</h3>
+                    <h3>Your Squad</h3>
                     <SelectedHeroList selected= {this.props.selectedHero} onRemove = {(id) => {this.onHeroRemoved(id)}}/>
                 </div>
                 <div className="col-lg-4">
-                    <h3>Overall Stats:</h3>
+                    <h3>Overall Stats</h3>
                     <TotalPower selectedList = {this.props.selectedHero}/>
                 </div>
             </div>
