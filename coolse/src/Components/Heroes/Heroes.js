@@ -16,10 +16,10 @@ onHeroRemoved(id){
        this.props.removeHeroById(id);
 }
 
-
     render(){
         return(
-            <>
+
+            <div className="App">
             <h1>SuperSquad</h1>
             <div className="row">
                 <div className="col-lg-4">
@@ -35,7 +35,8 @@ onHeroRemoved(id){
                     <TotalPower selectedList = {this.props.selectedHero}/>
                 </div>
             </div>
-            </>
+            </div>
+
         )
     }
 }

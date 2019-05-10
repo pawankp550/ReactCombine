@@ -2,17 +2,21 @@ import React from 'react';
 import Heroes from './Heroes/Heroes';
 import '../styles/index.css';
 import Header from './Header';
-
+import { BrowserRouter as Router, Route} from 'react-router-dom';
+import Memes from './Memegenerator/Memes';
+import Recipes from './RecipesFinder/Recipes';
 
 class App extends React.Component{
      render(){
          return(
-             <div>
-                <Header/>
-                <div className="App">
-                    <Heroes />
+             <Router>
+                <div>
+                    <Header/>
+                    <Route exact path="/" component={Heroes}/>
+                    <Route  exact path="/memes" component={Memes}/>
+                    <Route  exact path="/Recipes" component={Recipes}/>
                 </div>
-             </div>
+             </Router>
          )
      }
 }

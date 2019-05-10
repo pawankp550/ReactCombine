@@ -1,12 +1,10 @@
 import React from 'react';
 
-
-function Memes(){
+function Recipes(){
     return(
         <div className="App">
-        <h1>MemePage</h1>
+        <h1>Recipes</h1>
         </div>
     )
 }
-
-export default Memes;
+export default Recipes;
