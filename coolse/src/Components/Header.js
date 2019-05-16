@@ -3,25 +3,24 @@ import classToggle from './toggle';
 import { NavLink } from 'react-router-dom';
 
 
+
 function Header(){
     return(
         <>
-            <div className="Navbar">
-                <div className="Navbar__Link-toggle">
-                    <i onClick = {classToggle} className="fas fa-bars"></i>
-                </div>
-                <nav className="Navbar__Items">
-                    <NavLink exact  to = "/" activeClassName={"ActiveMode"} className="Navbar__Link">
-                        Super Squad
-                    </NavLink >
-                    <NavLink to="/Recipes" activeClassName={"ActiveMode"} className="Navbar__Link">
-                        Recipe Checker
-                    </NavLink>
-                    <NavLink to="/memes" activeClassName={"ActiveMode"} className="Navbar__Link">
-                        Meme Generator
-                    </NavLink>
-            </nav>
-        </div>
+            <ul className="container headerContainer">
+                <i onClick = {classToggle} className="burger fas fa-bars"></i>
+
+                    <li className="nav_Link"><NavLink exact to="/"  activeClassName="activelink">Super Squad
+                        </NavLink>
+                    </li>
+                    <li className="nav_Link"><NavLink  to="/Recipes"  activeClassName="activelink">Recipe Finder
+                        </NavLink>
+                    </li>
+                    <li className="nav_Link"><NavLink  to="/memes"  activeClassName="activelink">Meme Generator
+                        </NavLink>
+                    </li>
+
+            </ul>
         </>
     )
 
