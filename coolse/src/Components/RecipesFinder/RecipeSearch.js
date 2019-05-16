@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { getRecipe } from '../../actions/RecipeActions';
 
 class RecipeSearch extends React.Component{
 
@@ -9,7 +11,9 @@ class RecipeSearch extends React.Component{
         console.log(this.textInput.current.value)
     }
 
-
+    componentDidMount(){
+            this.props.getRecipe('onions,garlic','omelet')
+    }
 
     containerStyle={
         justifyContent: 'center',
@@ -35,4 +39,4 @@ class RecipeSearch extends React.Component{
     }
 }
 
-export default RecipeSearch;
+export default connect(null,{getRecipe})(RecipeSearch);
