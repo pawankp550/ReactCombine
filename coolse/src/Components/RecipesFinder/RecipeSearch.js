@@ -8,11 +8,8 @@ class RecipeSearch extends React.Component{
 
     handleSubmit= (e) => {
         e.preventDefault()
-        console.log(this.textInput.current.value)
-    }
-
-    componentDidMount(){
-            this.props.getRecipe('onions,garlic','omelet')
+        this.props.getRecipe(this.textInput.current.value)
+        console.log(this.props)
     }
 
     containerStyle={
@@ -39,4 +36,9 @@ class RecipeSearch extends React.Component{
     }
 }
 
-export default connect(null,{getRecipe})(RecipeSearch);
+const mapStateToprops = (state) => {
+        return {
+            Recipes:state.Recipes
+        }
+}
+export default connect(mapStateToprops,{getRecipe})(RecipeSearch);
