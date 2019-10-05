@@ -7,11 +7,11 @@ import { getRecipe } from '../../actions/RecipeActions';
 class Recipes extends React.Component{
 
     handleSubmit = (Ingredient) => {
-        this.props.getRecipe(Ingredient)   
+        this.props.getRecipe(Ingredient)
     }
-    
+
     shouldComponentUpdate(nextProp){
-       
+
             if(this.props.Recipes === nextProp.Recipes){
                 return false;
             }
@@ -23,9 +23,9 @@ class Recipes extends React.Component{
     render(){
             return(
             <div className="App">
-            <h1>Recipes</h1>
-            <RecipeSearch  handleSubmit = {(Ing) => this.handleSubmit(Ing)}/>
-            <RecipeList Recipes = {this.props.Recipes}/>
+                <h1>Recipes</h1>
+                <RecipeSearch  handleSubmit = {(Ing) => this.handleSubmit(Ing)}/>
+                <RecipeList Recipes = {this.props.Recipes}/>
             </div>
         )
     }

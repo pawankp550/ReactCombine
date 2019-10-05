@@ -4,8 +4,8 @@ export const  RECIPE_ERROR = 'RECIPE_ERROR';
 
 export const getRecipe = (ingredient="", dish="") =>  async dispatch => {
    try{
-        const resp = await axios.get(`https://www.food2fork.com/api/search?key=322f648786f0a31941eb39ce22c54f7d&q=${ingredient}&page=2`);
-       
+        const resp = await axios.get(`https://www.food2fork.com/api/search?key=322f648786f0a31941eb39ce22c54f7d&q=${ingredient}`);
+
         dispatch({
            type: GET_RECIPE,
            payload: resp.data.recipes

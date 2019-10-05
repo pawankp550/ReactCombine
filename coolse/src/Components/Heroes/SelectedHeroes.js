@@ -9,13 +9,13 @@ function SelectedHeroes(props){
                     {props.selected.map(hero =>
                         <a
                             className="list-group-item list-group-item-action list-group-item-danger"
-                            key={hero.id} onClick = {() => props.onRemove(hero.id)}>{hero.name}
-                            </a>
+                            key={hero.id} onClick = {() => props.onRemove(hero.id)}>
+                            {hero.name}
+                        </a>
                     )}
                 </div>
             </>
         )
-
 }
 
 export default SelectedHeroes;

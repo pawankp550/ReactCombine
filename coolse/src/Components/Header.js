@@ -3,13 +3,11 @@ import classToggle from './toggle';
 import { NavLink } from 'react-router-dom';
 
 
-
 function Header(){
     return(
         <>
             <ul className="container headerContainer">
                 <i onClick = {classToggle} className="burger fas fa-bars"></i>
-
                     <li className="nav_Link"><NavLink exact to="/"  activeClassName="activelink">Super Squad
                         </NavLink>
                     </li>
@@ -19,11 +17,9 @@ function Header(){
                     <li className="nav_Link"><NavLink  to="/memes"  activeClassName="activelink">Meme Generator
                         </NavLink>
                     </li>
-
             </ul>
         </>
     )
-
 }
 
 

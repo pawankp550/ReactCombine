@@ -1,10 +1,9 @@
-
 .App{
     text-align:center;
     padding:2%;
 }
 html, body{
-    background-color: azure;
+    background-color: #E7FDFF;
     margin: 0px auto;
     padding:0px;
     font-family: Nunito,Helvetica Neue,Helvetica,Arial,sans-serif;
@@ -49,6 +48,7 @@ button{
     .burger{
         display:none;
     }
+
     .container {
     max-width: -webkit-fill-available;
 }
@@ -56,8 +56,6 @@ button{
          width:250px;
         margin-right : 50px;
     }
-
-
 }
 
 @media only screen and (max-width:768px){
@@ -111,16 +109,21 @@ button{
 }
 
 .Recipelist_img{
-    width: 450px;
-   max-width: 100%; 
-   max-height: 450px;
+    width: 350px;
+    max-width: 100%;
+    max-height: 250px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px #a09d9d;
+}
+
+.Recipelist_img:hover{
+    box-shadow: 5px 5px 10px #8eb1da5e;
 }
 .Recipe_name {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgb(255, 255, 255);
-    text-shadow: 2px 1px #030303;
+    color: rgb(224, 222, 222);
+    text-shadow: 1px 1px 2px #000000;
   }
-  
